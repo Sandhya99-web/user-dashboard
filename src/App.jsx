@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider, useTheme } from "./ThemeContext";
 import UsersPage from "./pages/UsersPage";
 import UserDetails from "./pages/UserDetails";
-import UserForm from "./pages/UserForm";
 
 function ThemeToggle() {
   const { isDark, toggleTheme } = useTheme();
@@ -29,8 +28,6 @@ function AppContent() {
       <Routes>
         <Route path="/" element={<UsersPage />} />
         <Route path="/user/:id" element={<UserDetails />} />
-        <Route path="/add" element={<UserForm />} />
-        <Route path="/edit/:id" element={<UserForm />} />
       </Routes>
     </>
   );

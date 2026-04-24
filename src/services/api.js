@@ -13,3 +13,6 @@ export const deleteUser = (id) =>
 
 export const updateUser = (id, userData) =>
   axios.put(`${BASE}/${id}`, userData);
+
+export const createUser = (userData) =>
+  axios.post(`${BASE}/add`, userData);
